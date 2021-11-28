@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA</title>
+    <link rel="stylesheet" href="hotelstyle.css">
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div class="logo">
+                <img src="photos/logo.png" alt="logo" id="logoImg">
+            </div>
+    
+            <ul>
+                <li class="tag"><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Locations</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li class="tag"><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button>Download App</button>
+        </div>
+    </nav>
+
+    <section id="main">    
+        <div class="hotelname">
+            <p>The lalit new delhi</p>
+        </div>
+        <br>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="photos\delhi-lalit1.jpg" alt="hotel image">
+            
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="photos\delhi-lalit2.jpeg" alt="hotel image">
+        
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="photos\delhi-lalit3.jpg" alt="hotel image">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="photos\delhi-lalit4.jpg" alt="hotel image">
+              
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <div class="desc-out">
+            <div class="description">
+                <p id="hotel-desc">The Lalit New Delhi is located in central Delhi in close proximity to key commercial and business locations. The hotel operates 461 rooms and suites and offers over 39,000 square feet of conference and banqueting space. When visiting places in Delhi, rely on our expert 24-hour Concierge to guide you to the best tourist spots, historic sites, and shopping destinations just minutes away from The Lalit New Delhi.</p>
+                <div class="key-features">
+                    <p>One of a kind Art Junction</p>
+                    <p>Hosts the finest restaurant chains in India</p>
+                    <p>Blend of history and technology</p>
+                </div>
+
+                <a href="https://www.google.co.in/maps/place/The+LaLiT+New+Delhi/@28.6316615,77.2250438,17z/data=!4m12!1m6!3m5!1s0x390cfd31be8050c3:0x396a2ac036490cb8!2sThe+LaLiT+New+Delhi!8m2!3d28.6316615!4d77.2272325!3m4!1s0x390cfd31be8050c3:0x396a2ac036490cb8!8m2!3d28.6316615!4d77.2272325?hl=en" target="_blank" id="maplink"><p>&#128205; View on map</p></a>
+
+                <div class="price-container">
+                    <div class="price">
+                        <p>Classic Room</p><hr>
+                        <p>&#8377; 7500</p>
+                    </div>
+                    <div class="price">
+                        <p>Deluxe Room</p><hr>
+                        <p>&#8377; 11000</p>
+                    </div>
+                </div>
+
+                <button name="booknow" id="booknow"><a href="#">Book Now</a></button>
+            </div>
+            
+        </div>
+    
+        <div style="height: 50px;"></div>
+    </section>
+</body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</html>
