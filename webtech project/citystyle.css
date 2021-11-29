@@ -13,6 +13,7 @@
   width: 100%;
   justify-content: space-between;
   background-color: black;
+  z-index: 1;
 }
 #navbar ul {
   display: flex;
@@ -84,3 +85,108 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* main section */
+#main {
+  position: relative;
+  top: 80px;
+}
+
+.hotel {
+  display: flex;
+  margin: 2rem 4rem 2rem 8rem;
+  height: 18rem;
+}
+.heading {
+  background-color: rgba(175, 175, 175, 0.733);
+  text-align: center;
+  font-size: 4.5rem;
+}
+.hotelName {
+  font-size: 3rem;
+}
+.hotelImg {
+  height: 100%;
+  width: 27rem;
+}
+.hotelDetails {
+  padding-left: 1rem;
+}
+.hotelDetails div {
+  margin: 1rem 0;
+}
+.address {
+  font-size: 1.2rem;
+  color: gray;
+}
+.details {
+  background-color: #1ab64f;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border: 1px solid #1ab64f;
+  border-radius: 5px;
+}
+.hotelDetails .details a {
+  color: white;
+  text-decoration: none;
+}
+.details:hover {
+  background-color: green;
+}
+.hotelDetails a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.1rem;
+}
+.hotelDetails a:hover {
+  text-decoration: underline;
+}
+
+.rating {
+  font-size: 1.1rem;
+  /* background-color: chartreuse; */
+  color: black;
+  width: fit-content;
+  border: 2px solid black;
+  padding: 0.1rem 0.5rem;
+}
+
+hr {
+  width: 83%;
+  margin-left: 7rem;
+}
+
+/* .hotel1,
+.hotel2,
+.hotel3 {
+  width: 25rem;
+} */
+
+/* .hotel2 img,
+.hotel3 img {
+  width: 100%;
+} */
+/* .navhotel {
+  height: 102%;
+} */
+
+/* footer */
+
+footer {
+  height: 50px;
+  margin-top: 2px;
+}
+.foot {
+  background-color: rgba(27, 27, 27, 0.925);
+  text-align: center;
+  color: white;
+  padding: 20px 0px;
+}
+.foot img {
+  width: 2rem;
+}
+i {
+  color: #1ab64f;
+}
+
