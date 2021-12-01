@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <h2 id="title">Sign-In Your Account</h2>
+      </div>
+      <form id="form">
+        <div class="input">
+          <label class="input_label">Email</label>
+        </div>
+        <div class="input">
+          <input type="text" class="input_field" id="email" required />
+        </div>
+        <div class="input">
+          <label class="input_label">Password</label>
+        </div>
+        <div class="input">
+          <input type="password" class="input_field" id="password" required />
+        </div>
+        <button onclick="login()" class="button">Login</button>
+      </form>
+      <div class="text">
+        <p>Don't have an account? <a href="create.html">Create</a></p>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="firebase.js"></script>
+<script src="create.js"></script>
+  </body>
+</html>

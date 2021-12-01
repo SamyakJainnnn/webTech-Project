@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA</title>
+    <link rel="stylesheet" href="hotelstyle.css">
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="logo" id="logoImg">
+            </div>
+    
+            <ul>
+                <li class="tag"><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Locations</a>
+                    <div class="dropdown-content">
+                        <a href="delhi.html">Delhi</a>
+                        <a href="mumbai.html">Mumbai</a>
+                        <a href="goa.html">Goa</a>
+                    </div>
+                </li>
+                <li class="tag"><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <button onclick = "logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section id="main">    
+        <div class="hotelname">
+            <p>Fairfield by Marriott Goa Anjuna</p>
+        </div>
+        <br>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="photos\goa-fairfield1.jpg" alt="hotel image">
+            
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="photos\goa-fairfield2.jpg" alt="hotel image">
+        
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="photos\goa-fairfield3.jpg" alt="hotel image">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="photos\goa-fairfield4.jpg" alt="hotel image">
+              
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <div class="desc-out">
+            <div class="description">
+                <p id="hotel-desc">
+                    Stay and explore everything that Fairfield by Marriott Goa Anjuna has to offer. Experience our 4-star hotel's well-appointed rooms with private balconies and refreshing views, deluxe bedding, complimentary Wi-Fi access and a welcome drink .Our prime location in Anjuna provides easy access to North Goa's iconic attractions, from scenic beaches like Baga and Anjuna, to lively nightlife and ancient forts
+
+                </p>
+                <div class="key-features">
+                    <p>Dedicated area for kids</p>
+                    <p>Flexible meeting spaces equipped with the latest technology</p>
+                    <p>free beach shuttle drop to Anjuna Beach</p>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Fairfield+by+Marriott+Goa+Anjuna/@15.5763097,73.7557273,17z/data=!4m8!3m7!1s0x3bbfea251e2c53a7:0x23b4f2985f47dd6b!5m2!4m1!1i2!8m2!3d15.5762752!4d73.7578838?hl=en" target="_blank" id="maplink"><p>&#128205; View on map</p></a>
+
+                <div class="price-container">
+                    <div class="price">
+                        <p>Classic Room</p><hr>
+                        <p>&#8377; 9000</p>
+                    </div>
+                    <div class="price">
+                        <p>Deluxe Room</p><hr>
+                        <p>&#8377; 12000</p>
+                    </div>
+                </div>
+
+                <button name="booknow" id="booknow"><a href="book.html">Book Now</a></button>
+            </div>
+            
+        </div>
+    
+        <div style="height: 50px;"></div>
+        <footer>
+            <div class="foot">
+                Copyright &copy; www.samahotels.com 
+                <br>
+                <br>
+                All rights reserved
+                <br>
+                <br>
+                <img src="photos\instagram.png" alt="instagramIcon">
+                <img src="photos\facebook.png" alt="instagramIcon">
+                <img src="photos\linkedin.png" alt="instagramIcon">
+                <img src="photos\twitter.png" alt="instagramIcon">
+            </div>
+        </footer>
+    </section>
+</body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</html>

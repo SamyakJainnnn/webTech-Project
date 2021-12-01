@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA</title>
+    <link rel="stylesheet" href="hotelstyle.css">
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="logo" id="logoImg">
+            </div>
+    
+            <ul>
+                <li class="tag"><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Locations</a>
+                    <div class="dropdown-content">
+                        <a href="delhi.html">Delhi</a>
+                        <a href="mumbai.html">Mumbai</a>
+                        <a href="goa.html">Goa</a>
+                    </div>
+                </li>
+                <li class="tag"><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <button onclick = "logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section id="main">    
+        <div class="hotelname">
+            <p>Novotel Juhu Beach Mumbai</p>
+        </div>
+        <br>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="photos\mumbai-novotel1.jpg" alt="hotel image">
+            
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="photos\mumbai-novotel2.jpg" alt="hotel image">
+        
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="photos\mumbai-novotel3.jpg" alt="hotel image">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="photos\mumbai-novotel4.jpg" alt="hotel image">
+              
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <div class="desc-out">
+            <div class="description">
+                <p id="hotel-desc">
+                    Novotel Mumbai Juhu Beach is centrally located in Mumbai city, on Juhu Beach, close to shopping centres and corporate hub, neighbours the Bollywood Boulevard and is well connected to the landmarks, airports and tourist attractions of the city.
+
+                </p>
+                <div class="key-features">
+                    <p>Centrally located in the city, with tourist attractions minutes away</p>
+                    <p>Gada da Vida - Chic sea lounge overlooking the sea</p>
+                    <p> International award winning restaurants to serve the best local cuisine</p>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Novotel+Mumbai+Juhu+Beach/@19.1087247,72.8221495,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c99824616e79:0xa01db96507bcb46!5m2!4m1!1i2!8m2!3d19.1087355!4d72.8244139?hl=en" target="_blank" id="maplink"><p>&#128205; View on map</p></a>
+
+                <div class="price-container">
+                    <div class="price">
+                        <p>Classic Room</p><hr>
+                        <p>&#8377; 8000</p>
+                    </div>
+                    <div class="price">
+                        <p>Deluxe Room</p><hr>
+                        <p>&#8377; 11500</p>
+                    </div>
+                </div>
+
+                <button name="booknow" id="booknow"><a href="book.html">Book Now</a></button>
+            </div>
+            
+        </div>
+    
+        <div style="height: 50px;"></div>
+        <footer>
+            <div class="foot">
+                Copyright &copy; www.samahotels.com 
+                <br>
+                <br>
+                All rights reserved
+                <br>
+                <br>
+                <img src="photos\instagram.png" alt="instagramIcon">
+                <img src="photos\facebook.png" alt="instagramIcon">
+                <img src="photos\linkedin.png" alt="instagramIcon">
+                <img src="photos\twitter.png" alt="instagramIcon">
+            </div>
+        </footer>
+    </section>
+</body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</html>
